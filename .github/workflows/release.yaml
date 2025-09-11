@@ -3,6 +3,10 @@ name: Release
 on:
   workflow_dispatch:
 
+permissions:
+  actions: write
+  contents: write
+
 jobs:
   build:
     name: Build
@@ -28,8 +32,9 @@ jobs:
           fetch-depth: 1
       - name: Build
         run: |
-          sudo rm -rf /opt/*
+          sudo rm -rf /opt/x-tools
           ./scripts/make ${{ matrix.target }} ${{ matrix.version }}
+
       - name: Generate file
         run: |
           file_name="$(uname -m)-cross-tools-${{ matrix.target }}-${{ matrix.version }}"

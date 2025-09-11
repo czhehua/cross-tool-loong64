@@ -4,6 +4,7 @@ on:
   workflow_dispatch:
 
 permissions:
+  actions: write
   contents: write
 
 jobs:
@@ -38,7 +39,7 @@ jobs:
       - name: Build
         id: build
         run: |
-          sudo rm -rf /opt/*
+          sudo rm -rf /opt/x-tools
           ./scripts/make ${{ matrix.target }} ${{ matrix.version }} ${{ matrix.host_arch }}
 
       - name: Upload package
