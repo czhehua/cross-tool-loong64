@@ -2,22 +2,22 @@ Forked from: https://github.com/loong64/cross-tools
 
 Diff: 
 - Change stable GCC version to 12.3.0. 
-- Build stable gnu target for amd64 only.
+- Build stable gnu target only.
 
 # cross-tool-loong64
 
-LoongArch64 cross-compile toolchain for x86_64(amd64) architecture.
+LoongArch64 cross-compile toolchain, supports both x86_64(amd64) and aarch64(arm64) architectures.
 
 ## Supported targets
 
-| Version      | Target                             | Kernel      | Binutils   | GCC        | Libc(glibc) | Libc(musl) |
-|--------------|------------------------------------|-------------|------------|------------|-------------|------------|
-| stable       | loongarch64-unknown-linux-gnu      | 6.6.101     | 2.41       | 12.3.0     | 2.38        |            |
+| Version      | Target                             | Kernel      | Binutils   | GCC        | Libc(glibc) |
+|--------------|------------------------------------|-------------|------------|------------|-------------|
+| stable       | loongarch64-unknown-linux-gnu      | 6.6.101     | 2.41       | 12.3.0     | 2.38        |
 
 
 ## How to use
 
-Download the tarball from the [release page](https://github.com/czhehua/cross-tools-loong64/releases) and extract it to `/opt/x-tools`:
+Download the tarball from the [release page](https://github.com/czhehua/cross-tool-loong64/releases) and extract it to `/opt/x-tools`:
 
 ```sh
 sudo mkdir -p /opt/x-tools
